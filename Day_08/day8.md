@@ -23,7 +23,7 @@ app.get(
 > Express middleware are functions that execute during the lifecycle of a request to the express server.
 
 - -> GET calls get cached
-- -> POST class doesn’t get cached (used to send passwords)
+- -> POST calls doesn’t get cached (used to send passwords)
 
 ```js
 const express = require("express");
