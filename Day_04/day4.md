@@ -61,7 +61,7 @@ A Web Server is a Software and it’s underlying hardware that accepts requests 
 ```
 Create    —————> POST
 Read      —————> GET
-Update   —————> PUT
+Update    —————> PUT
 Delete    —————> DELETE
 ```
 
