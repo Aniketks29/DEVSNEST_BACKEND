@@ -73,6 +73,7 @@ app.get("/products", (req, res) => {
 app.listen(5000);
 
 // ----------------------------------------- //
+// ---------------Dynamic URL-------------- //
 
 app.get("/a(b)?cd", (req, res) => {
   res.send("a(b is optional)cd");
@@ -94,7 +95,6 @@ app.get(/k/, (req, res) => {
   res.send("use of regex starting with k");
 });
 
-// ---------Dynamic URL----------- //
 app.get("/user/:userid/student/:studentid", (req, res) => {
   res.send(req.params); // http://localhost:5000/user/6/student/1
 });
