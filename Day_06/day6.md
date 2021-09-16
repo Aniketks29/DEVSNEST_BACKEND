@@ -64,10 +64,10 @@
 ... });
 ```
 
-// Remove folder
+> // Remove folder
 
 ```zsh
-> fs.rmdir('AsyncFloder', err => {
+> fs.rmdir('AsyncFloder', (err) => {
 ... if (err) {
 ..... console.log(err);
 ..... }
@@ -77,7 +77,7 @@
 // Rename Folder -
 
 ```zsh
-> fs.rename('testFolder', 'newTestFolder', err => {
+> fs.rename('testFolder', 'newTestFolder', (err) => {
 ... if (err) {
 ..... console.log(err);
 ..... }
@@ -87,7 +87,7 @@
 // Rename File -
 
 ```zsh
-> fs.rename('Filename', 'newFilename', err => {
+> fs.rename('Filename', 'newFilename', (err) => {
 ... if (err) {
 ..... console.log(err);
 ..... }
