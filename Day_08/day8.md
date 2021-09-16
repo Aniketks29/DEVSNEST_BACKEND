@@ -3,6 +3,10 @@
 > Send multiple functions as response -
 
 ```js
+const express = require("express");
+
+// to use express
+const app = express();
 app.get(
   "/",
   (req, res, next) => {
