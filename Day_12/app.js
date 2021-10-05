@@ -8,10 +8,9 @@ const { redisClient,
   RedisStore,
   session } = require("./database/redis");
 
+require('./database/mongo');
 
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 
 var app = express();
 
@@ -25,8 +24,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+
 
 app.use(session({
   store: new RedisStore({ client: redisClient }),
@@ -39,6 +39,10 @@ app.use(session({
     maxAge: 1000 * 60 * 10
   }
 }))
+
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
